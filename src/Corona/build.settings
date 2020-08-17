@@ -6,12 +6,12 @@ settings =
 		-- supported = { "landscapeLeft", "landscapeRight" },
 		-- supported = { "landscapeLeft", "landscapeRight", "portrait", "portraitUpsideDown", },
 	},
---	plugins = {   -- this is the plugin in development, no need to pull it from server
---        ["plugin.pack"] =
---        {
---            publisherId = "com.solar2d",
---        },
---	},
+	plugins = {   -- this is the plugin in development, no need to pull it from server
+       ["plugin.pack"] =
+       {
+           publisherId = "com.solar2d",
+       },
+	},
 	iphone =
 	{
 		plist =

@@ -8,6 +8,13 @@
 * Roberto Ierusalimschy <roberto@inf.puc-rio.br>.
 */
 
+#ifdef _WIN32
+#  define DLLEXPORT __declspec( dllexport )
+#else
+#  define DLLEXPORT
+#endif
+
+
 #define	OP_ZSTRING	'z'		/* zero-terminated string */
 #define	OP_BSTRING	'p'		/* string preceded by length byte */
 #define	OP_WSTRING	'P'		/* string preceded by length word */
@@ -258,7 +265,7 @@ static const luaL_reg R[] =
 	{NULL,	NULL}
 };
 
-int luaopen_pack(lua_State *L)
+DLLEXPORT  luaopen_pack(lua_State *L)
 {
 #ifdef USE_GLOBALS
  lua_register(L,"bpack",l_pack);
@@ -269,7 +276,7 @@ int luaopen_pack(lua_State *L)
  return 0;
 }
 
-int luaopen_plugin_pack(lua_State *L)
+DLLEXPORT int luaopen_plugin_pack(lua_State *L)
 {
 	return luaopen_pack(L);
 }
