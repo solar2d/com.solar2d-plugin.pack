@@ -178,7 +178,7 @@
 			Name="src"
 			>
 			<File
-				RelativePath="..\shared\PluginMemBtm.cpp"
+				RelativePath="..\shared\lpack.c"
 				>
 			</File>
 		</Filter>
